@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ParkingLotForm from './parking.slot.form';
+import AllocateSlotForm from './allocate.slot';
+import DeallocateSlotForm from './deallocate';
+import AvailableSlots from './available.slot';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Parking Lot Management System</h1>
+
+      <div>
+        <h2>Onboard Parking Lot</h2>
+        <ParkingLotForm />
+      </div>
+
+      <div>
+        <h2>Allocate Slot</h2>
+        <AllocateSlotForm />
+      </div>
+
+      <div>
+        <h2>Deallocate Slot</h2>
+        <DeallocateSlotForm />
+      </div>
+
+      <div>
+        <AvailableSlots />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
