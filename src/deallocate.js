@@ -10,13 +10,13 @@ const DeallocateSlotForm = () => {
 
     const handleDeallocateSlot = async () => {
         try {
-            await axios.delete(`http://127.0.0.1:8000/api/1/slots/deallocate/${slotNumber}`);
+            await axios.delete(`http://127.0.0.1:8000/api/1/slots/deallocate/?slotNumber=${slotNumber}`);
             alert('Slot deallocated successfully!');
         } catch (error) {
             console.error(error);
             alert('Error deallocating slot');
         }
-    };
+    };    
 
     return (
         <div>
