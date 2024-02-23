@@ -11,7 +11,7 @@ const AllocateSlotForm = () => {
 
     const handleAllocateSlot = async () => {
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/1/slots/allocate', carType);
+            const response = await axios.post('http://127.0.0.1:8000/api/1/slots/allocate', { carType });
             setSlotNumber(response.data.data.slotNumber);
         } catch (error) {
             console.error(error);
